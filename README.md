@@ -1,7 +1,9 @@
 # CodeEditorAutocomplete
 
 > author: Eugene Yevhen Andruszczenko
+
 > github: @32teeth
+
 > email: eugene.andruszczenko@gmail.com
 
 ### Overview
