@@ -1,41 +1,42 @@
 {
-  "name": "@amzn/code-editor-autocomplete",
+  "name": "cloudscape-design-components_codeeditor-autocomplete",
   "version": "0.1.0",
-  "description": "",
-  "author": "",
-  "license": "UNLICENSED",
-  "repository": "ssh://git.amazon.com/pkg/CodeEditorAutocomplete",
-  "homepage": "https://code.amazon.com/packages/CodeEditorAutocomplete",
-  "main": "index.js",
-  "scripts": {
-    "start": "webpack-dev-server .",
-    "build": "rm -rf dist && webpack ."
-  },
-  "files": [],
-  "npm-pretty-much": {
-    "runTest": "never",
-    "ciBuild": "always"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.17.10",
-    "@babel/core": "^7.17.10",
-    "@babel/preset-env": "^7.17.10",
-    "@babel/preset-react": "^7.16.7",
-    "babel-loader": "^8.2.5",
-    "html-webpack-plugin": "^5.5.0",
-    "webpack": "^5.72.1",
-    "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.9.0"
-  },
+  "description": "Adding Autocomplete to Cloudscape CodeEditor Component",
+  "author": "32teeth",
   "dependencies": {
     "@cloudscape-design/components": "^3.0.130",
     "@cloudscape-design/global-styles": "^1.0.5",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
     "ace-builds": "^1.13.1",
-    "css-loader": "^6.7.2",
-    "file-loader": "^6.2.0",
-    "postcss-loader": "^7.0.2",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "style-loader": "^3.3.1"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

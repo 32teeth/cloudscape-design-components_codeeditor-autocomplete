@@ -1,4 +1,4 @@
-import ace, { Ace } from 'ace-builds';
+import ace from 'ace-builds';
 import React, { useEffect, useState } from 'react';
 
 import { Completions } from './Completions';
