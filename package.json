@@ -4,8 +4,8 @@
   "description": "Adding Autocomplete to Cloudscape CodeEditor Component",
   "author": "32teeth",
   "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=8.15.0"
+    "node": "14.x",
+    "npm": "6.x"
   },
   "dependencies": {
     "@cloudscape-design/components": "^3.0.130",
