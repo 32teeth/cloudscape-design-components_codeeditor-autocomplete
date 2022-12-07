@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "description": "Adding Autocomplete to Cloudscape CodeEditor Component",
   "author": "32teeth",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.15.0"
+  },
   "dependencies": {
     "@cloudscape-design/components": "^3.0.130",
     "@cloudscape-design/global-styles": "^1.0.5",
