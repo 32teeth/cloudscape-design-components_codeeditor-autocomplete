@@ -1,0 +1,181 @@
+:root {
+  /**
+   * width
+   */
+  --nav-width: 250px;
+
+  /**
+   * height
+   */
+  --header-height: 56px;
+  --masthead-min-height: 50px;
+  --masthead-max-height: 150px;
+  --footer-height: 100px;
+
+  /**
+   * padding
+   */
+  --masthead-padding: 25px;
+  --section-padding: 25px;
+
+  /**
+   * colors
+   */
+  --white: #FFFFFF;
+  --masthead-gradient-light: var(--white);
+  --masthead-gradient-dark: #EEEEEEAA;
+  --main-gradient-light: #FEFEFECC;
+  --main-gradient-dark: #EEEEEECC;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  font-weight: 300;
+  text-size-adjust: 100%;
+  line-height: 1.1;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+
+/**
+  root react element
+*/
+#root {
+  min-height: 100vh;
+  height: 100%;
+  width: 100vw;
+
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "nav masthead"
+    "nav main"
+    "nav footer";
+  grid-template-rows:
+    var(--header-height)
+    minmax(
+      var(--masthead-min-height),
+      var(--masthead-max-height)
+    )
+    auto
+    var(--footer-height);
+  grid-template-columns: var(--nav-width) 1fr;
+}
+
+header {
+  grid-area: header;
+  background:var(--masthead-gradient-dark);
+}
+
+nav {
+  grid-area: nav;
+}
+
+.masthead {
+  grid-area: masthead;
+  padding: var(--masthead-padding);
+
+  background: repeating-linear-gradient(
+    45deg,
+    var(--masthead-gradient-light),
+    var(--masthead-gradient-light) 20px,
+    var(--masthead-gradient-dark) 20px,
+    var(--masthead-gradient-dark) 40px
+  );
+
+  font-size: 2rem;
+}
+
+main {
+  grid-area: main;
+  height:100%;
+  width:100%;
+
+  background: repeating-linear-gradient(
+    135deg,
+    var(--main-gradient-light),
+    var(--main-gradient-light) 10px,
+    var(--main-gradient-dark) 10px,
+    var(--main-gradient-dark) 20px
+  );
+}
+
+footer {
+  grid-area: footer;
+}
+
+header, nav, main, footer, .masthead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: calc(var(--section-padding) / 2);
+  width: 100%;
+  height: 100%;
+  padding: 0 var(--section-padding);
+}
+
+/**
+ * magic
+ **/
+.workflow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 135px;
+  border-radius: 10px;
+
+  background: rgba(255,255,255,0.5);
+  border: solid 1px;
+}
+
+.workflow:empty {
+  position:relative;
+  border: dashed 1px;
+  border-color: rgba(255, 0 ,0 , 1);
+}
+
+.workflow:empty:before {
+  content: '';
+  display: flex;
+  position: absolute;
+  left:10px;
+  right: 10px;
+  top: 10px;
+  bottom: 10px;
+  border-radius: 0px;
+
+  background-image:
+    linear-gradient(var(--main-gradient-dark) var(--section-padding), transparent 0),
+    linear-gradient(var(--main-gradient-dark) var(--section-padding), transparent 0),
+    linear-gradient(var(--main-gradient-dark) var(--section-padding), transparent 0),
+    linear-gradient(var(--main-gradient-dark) var(--section-padding), transparent 0),
+    linear-gradient(var(--main-gradient-dark) var(--section-padding), transparent 0),
+    linear-gradient(rgba(255,0,0,0.25) 125px, transparent 0);
+
+  background-repeat: no-repeat;
+
+  background-size:
+    25% 135px,
+    5% 135px,
+    calc(100% - 10px) 135px,
+    48% 135px,
+    48% 135px,
+    100% 135px;
+
+  background-position:
+    5px 5px,
+    top 5px right 5px,
+    5px calc((var(--section-padding) * 1.5) + 5px),
+    5px calc((var(--section-padding) * 3) + 5px),
+    calc(100% - 5px) calc((var(--section-padding) * 3) + 5px),
+    0 0;
+}
