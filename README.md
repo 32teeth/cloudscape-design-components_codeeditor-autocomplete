@@ -19,5 +19,7 @@ One drawback of using the offered `<CodeEditor>` is it’s direct capability to 
 npm i
 npm start
 ```
-### Viewing
-[Open you local browser to :5001](http://localhost:5001/)
+### Playground
+| Local | Cloud |
+|-|-|
+|[Open you local browser to :5001](http://localhost:5001/)|[heroku](https://cloudscape-autocomplete.herokuapp.com/)
