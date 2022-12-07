@@ -8,9 +8,8 @@
   "homepage": "https://code.amazon.com/packages/CodeEditorAutocomplete",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server .",
-    "start": "npm run build",
-    "build": "webpack ."
+    "start": "webpack-dev-server .",
+    "build": "rm -rf dist && webpack ."
   },
   "files": [],
   "npm-pretty-much": {
