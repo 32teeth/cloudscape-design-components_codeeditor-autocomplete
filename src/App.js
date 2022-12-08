@@ -5,17 +5,12 @@ import { Editor } from './Editor';
 const App = () => {
   return (
     <>
-      <nav>navigation</nav>
-      <header>header</header>
-      <div class='masthead'>masthead</div>
-      <main>
-        <section>
-          <div class='workflow'>workflow</div>
-          <Editor/>
-          <div class='workflow'></div>
-        </section>
-      </main>
-      <footer>footer</footer>
+      <h1>CodeEditor with Autocomplete</h1>
+      <Editor/>
+      <section>
+        <h2>32teeth</h2>
+        <h3><a href='https://github.com/32teeth/cloudscape-design-components_codeeditor-autocomplete' target='_blank'>❤ on GitHub</a></h3>
+      </section>
     </>
   );
 };
