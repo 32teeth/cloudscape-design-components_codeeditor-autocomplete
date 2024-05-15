@@ -8,7 +8,7 @@
     "npm": "6.x"
   },
   "dependencies": {
-    "@cloudscape-design/components": "^3.0.293",
+    "@cloudscape-design/components": "^3.0.466",
     "@cloudscape-design/global-styles": "^1.0.18",
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "^13.4.0",
